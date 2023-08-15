@@ -2,10 +2,7 @@ const dropdownButton = document.querySelector('#offer-dropdown-button') as HTMLB
 const dropdown = document.querySelector('#offer-dropdown') as HTMLUListElement
 
 dropdownButton.addEventListener('click', () => {
-  if (dropdown?.classList.contains('hidden'))
-    dropdown?.classList.remove('hidden')
-  else
-    dropdown?.classList.add('hidden')
+  dropdown?.classList.toggle('hidden')
 })
 
 const searchInput = document.querySelector('#search-input') as HTMLInputElement
@@ -21,34 +18,27 @@ searchInput.addEventListener('input', () => {
   }
 })
 
-const photoPrevious = document.querySelector('#photo-previous') as HTMLButtonElement
-const photoNext = document.querySelector('#photo-next') as HTMLButtonElement
 const photos = document.querySelectorAll('#photo-0, #photo-1, #photo-2') as NodeListOf<HTMLImageElement>
+let currentPhoto = 0
+
 photos.forEach((photo, index) => {
   photo.style.transform = `translateX(${index * 100}%)`
   if (index > 0)
     photo.style.zIndex = '-1'
 })
 
-let currentPhoto = 0
+const photoPrevious = document.querySelector('#photo-previous') as HTMLButtonElement
 photoPrevious.addEventListener('click', () => {
-  if (currentPhoto === 0)
-    currentPhoto = photos.length - 1
-  else
-    currentPhoto--
-
+  currentPhoto = (currentPhoto === 0) ? photos.length - 1 : currentPhoto - 1
   photos.forEach((photo, index) => {
     photo.style.transform = `translateX(${(index - currentPhoto) * 100}%)`
   })
   currentPhoto = currentPhoto % photos.length
 })
 
+const photoNext = document.querySelector('#photo-next') as HTMLButtonElement
 photoNext.addEventListener('click', () => {
-  if (currentPhoto === photos.length - 1)
-    currentPhoto = 0
-  else
-    currentPhoto++
-
+  currentPhoto = (currentPhoto === photos.length - 1) ? 0 : currentPhoto + 1
   photos.forEach((photo, index) => {
     photo.style.transform = `translateX(${(index - currentPhoto) * 100}%)`
   })
