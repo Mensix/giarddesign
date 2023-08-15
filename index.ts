@@ -38,10 +38,6 @@ photoNext.addEventListener('click', () => {
 
   photos.forEach((photo, index) => {
     photo.style.transform = `translateX(${(index - currentPhoto) * 100}%)`
-    if (index === currentPhoto)
-      photo.style.zIndex = '1'
-    else
-      photo.style.zIndex = '-1'
   })
   currentPhoto = currentPhoto % photos.length
 })
