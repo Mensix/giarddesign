@@ -21,6 +21,7 @@ searchInput.addEventListener('input', () => {
   }
 })
 
+const photoPrevious = document.querySelector('#photo-previous') as HTMLButtonElement
 const photoNext = document.querySelector('#photo-next') as HTMLButtonElement
 const photos = document.querySelectorAll('#photo-0, #photo-1, #photo-2') as NodeListOf<HTMLImageElement>
 photos.forEach((photo, index) => {
@@ -30,6 +31,18 @@ photos.forEach((photo, index) => {
 })
 
 let currentPhoto = 0
+photoPrevious.addEventListener('click', () => {
+  if (currentPhoto === 0)
+    currentPhoto = photos.length - 1
+  else
+    currentPhoto--
+
+  photos.forEach((photo, index) => {
+    photo.style.transform = `translateX(${(index - currentPhoto) * 100}%)`
+  })
+  currentPhoto = currentPhoto % photos.length
+})
+
 photoNext.addEventListener('click', () => {
   if (currentPhoto === photos.length - 1)
     currentPhoto = 0
