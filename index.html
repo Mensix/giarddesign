@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.ts" type="module"></script>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <!-- nav -->
+    <nav class="flex justify-between items-center py-6 px-20 h-[72px] bg-white shadow-md">
+      <div>
+        <span class="text-2xl text-gray-950">
+          giard<span class="font-black">design</span>
+        </span>
+      </div>
+      <div class="flex gap-12">
+        <ul class="flex items-center gap-12">
+          <li class="flex gap-1">
+            <button id="offer-dropdown-button"
+              class="flex relative items-center gap-1 text-gray-900 hover:underline hover:underline-offset-[1.75rem]">
+              <span id="offer-dropdown-button">Oferta</span>
+              <svg id="offer-dropdown-button" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <ul id="offer-dropdown"
+              class="absolute top-20 bg-white border border-gray-200 rounded-md shadow-sm py-2 hidden z-10">
+              <li class="px-4 w-full py-2 hover:bg-gray-100">
+                <a href="#">Strony internetowe</a>
+              </li>
+              <li class="px-4 w-full py-2 hover:bg-gray-100">
+                <a href="#">Aplikacje</a>
+              </li>
+              <li class="px-4 w-full py-2 hover:bg-gray-100">
+                <a href="#">Sklepy internetowe</a>
+              </li>
+              <li class="px-4 w-full py-2 hover:bg-gray-100">
+                <a href="#">Blogi</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="text-gray-900 hover:underline hover:underline-offset-[1.75rem]">O firmie</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-900 hover:underline hover:underline-offset-[1.75rem]">Realizacje</a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-900 hover:underline hover:underline-offset-[1.75rem]">Kontakt</a>
+          </li>
+        </ul>
+        <div class="relative mx-auto w-max">
+          <input type="search" id="search-input" placeholder=""
+            class="relative z-10 h-12 w-12 bg-transparent cursor-pointer rounded-full border outline-none focus:w-full focus:pl-12 focus:pr-4 transition-all ease-in-out [&:not(:placeholder-shown)]:w-full" />
+          <svg class="absolute inset-y-0 translate-y-1/4 h-8 w-12 stroke-gray-500 px-4"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main class="flex items-center h-[calc(100vh-72px)] bg-[#DCC1AB] gap-16">
+      <section class="px-16">
+        <h1 class="text-6xl mb-12 font-medium">Nowoczesna aranżacja Twojego ogrodu</h1>
+        <p class="mb-20">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy
+          kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+        <ul class="flex gap-9">
+          <a href="#"
+            class="px-6 py-3 bg-[#1B5B31] text-white rounded-full focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
+            Skontaktuj się z nami</a>
+          <a href="#"
+            class="px-6 py-3 border border-[#1B5B31] rounded-full text-[#1B5B31] focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out flex items-center gap-2">
+            Zobacz nasze realizacje
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </a>
+        </ul>
+      </section>
+      <div class="relative w-full h-full">
+        <img src="https://picsum.photos/600/600?random=0" class="absolute right-full w-full h-full top-0 z-[-1]"
+          id="photo-0">
+        <img src="https://picsum.photos/600/600?random=1" class="w-full h-full" id="photo-1">
+        <img src="https://picsum.photos/600/600?random=2" class="absolute left-full w-full h-full top-0 z-[-1]"
+          id="photo-2">
+        <div class="absolute right-0 bottom-0 bg-[#F5F0EC]">
+          <button class="p-4" id="photo-previous">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button class="p-4" id="photo-next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      </div>
+    </main>
+  </body>
+
+</html>
