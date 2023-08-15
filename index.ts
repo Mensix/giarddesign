@@ -52,8 +52,8 @@ photoNext.addEventListener('click', () => {
     photos[0].classList.remove('left-full')
     photos[0].classList.add('absolute', 'right-full', 'top-0', 'z-[-1]')
     photos[1].classList.remove('absolute', 'right-full', 'top-0')
-    photos[2].classList.add('absolute', 'left-full', 'z-[-1]')
-    photos[2].classList.remove('right-full', 'top-0')
+    photos[2].classList.add('absolute', 'left-full', 'z-[-1]', 'top-0')
+    photos[2].classList.remove('right-full')
     photoIndex = 1
   }
 })
