@@ -32,28 +32,31 @@ let photoIndex = 1
 photoNext.addEventListener('click', () => {
   if (photoIndex === 1) {
     /* 2 0 1 */
-    photos[0].classList.remove('absolute', 'right-full', 'top-0', 'z-[-1]')
+    photos[0].classList.add('left-0')
+    photos[0].classList.remove('-left-full', 'top-0', 'z-[-1]')
     photos[1].classList.add('absolute', 'left-full', 'top-0', 'z-[-1]')
     photos[2].classList.remove('left-full')
-    photos[2].classList.add('absolute', 'right-full', 'top-0', 'z-[-1]')
+    photos[2].classList.add('absolute', '-left-full', 'top-0', 'z-[-1]')
     photoIndex = 2
   }
   else if (photoIndex === 2) {
     /* 1 2 0 */
     photos[0].classList.add('absolute', 'left-full', 'z-[-1]')
-    photos[0].classList.remove('right-full', 'top-0')
+    photos[0].classList.remove('-left-full', 'top-0')
     photos[1].classList.remove('left-full')
-    photos[1].classList.add('absolute', 'right-full', 'top-0', 'z-[-1]')
-    photos[2].classList.remove('absolute', 'right-full', 'left-full', 'top-0', 'z-[-1]')
+    photos[1].classList.add('absolute', '-left-full', 'top-0', 'z-[-1]')
+    photos[2].classList.add('left-0')
+    photos[2].classList.remove('-left-full', 'left-full', 'top-0', 'z-[-1]')
     photoIndex = 0
   }
   else if (photoIndex === 0) {
     /* 0 1 2 */
     photos[0].classList.remove('left-full')
-    photos[0].classList.add('absolute', 'right-full', 'top-0', 'z-[-1]')
-    photos[1].classList.remove('absolute', 'right-full', 'top-0')
+    photos[0].classList.add('absolute', '-left-full', 'top-0', 'z-[-1]')
+    photos[1].classList.add('left-0')
+    photos[1].classList.remove('-left-full', 'top-0', 'z-[-1]')
     photos[2].classList.add('absolute', 'left-full', 'z-[-1]', 'top-0')
-    photos[2].classList.remove('right-full')
+    photos[2].classList.remove('-left-full')
     photoIndex = 1
   }
 })
