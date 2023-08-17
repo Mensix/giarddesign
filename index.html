@@ -3,17 +3,16 @@
 
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="stylesheet" href="index.css" />
     <script src="index.ts" type="module"></script>
   </head>
 
   <body class="overflow-x-hidden">
     <!-- nav -->
-    <nav class="flex sticky z-[1] top-0 h-[72px] items-center justify-between bg-white px-20 py-6 shadow-md">
-      <div>
-        <span class="text-2xl text-gray-950"> giard<span class="font-black">design</span> </span>
-      </div>
-      <div class="flex gap-12">
+    <nav class="flex isolate sticky z-[1] top-0 h-[72px] items-center justify-between bg-white px-4 py-6 shadow-md">
+      <span class="text-2xl text-gray-950"> giard<span class="font-black">design</span> </span>
+      <div class="gap-12 hidden">
         <ul class="flex items-center gap-12">
           <li class="flex gap-1">
             <button id="offer-dropdown-button"
@@ -67,12 +66,12 @@
     </nav>
 
     <!-- main -->
-    <main class="isolate flex h-[calc(100vh-72px)] w-full items-center">
-      <section class="relative flex h-full w-1/2 flex-col justify-center bg-[#DCC1AB] px-16">
+    <main class="flex h-auto w-full items-center">
+      <section class="relative flex h-full w-full flex-col justify-center bg-[#DCC1AB] px-4 py-16">
         <h1 class="mb-12 text-6xl font-medium">Nowoczesna aranżacja Twojego ogrodu</h1>
         <p class="mb-20">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy
           kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
-        <ul class="flex gap-9">
+        <ul class="flex flex-wrap gap-2">
           <a href="#"
             class="rounded-full bg-[#1B5B31] px-6 py-3 text-white focus:ring-4 hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:ease-in-out focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
             Skontaktuj się z nami</a>
@@ -86,42 +85,19 @@
           </a>
         </ul>
       </section>
-      <div class="relative z-[-1] h-full w-1/2 bg-transparent">
-        <img src="https://picsum.photos/600/600?random=0"
-          class="absolute h-full w-full transition-transform duration-1000" id="photo-0" />
-        <img src="https://picsum.photos/600/600?random=1"
-          class="absolute h-full w-full transition-transform duration-1000" id="photo-1" />
-        <img src="https://picsum.photos/600/600?random=2"
-          class="absolute h-full w-full transition-transform duration-1000" id="photo-2" />
-      </div>
-      <div class="absolute bottom-0 right-0 bg-[#F5F0EC]">
-        <button class="p-4" id="photo-previous">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-        <button class="p-4" id="photo-next">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      </div>
     </main>
 
-    <!-- offer -->
-    <section class="flex h-screen w-full flex-col justify-center gap-12 bg-[#F5F0EC]">
-      <div class="px-36">
+    <section class="flex px-4 h-auto py-16 w-full flex-col justify-center gap-12 bg-[#F5F0EC]">
+      <div>
         <small class="mb-4 block text-base text-[#1B5B31]">Oferta</small>
         <h2 class="mb-8 text-6xl font-medium">Działamy <span class="font-semibold italic">kompleksowo</span></h2>
         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz
           rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie
           posłużymy radą i wieloletnim doświadczeniem.</p>
       </div>
-      <div class="grid grid-flow-col grid-cols-3 grid-rows-[1fr] gap-8 px-24">
+      <div class="grid gap-8">
         <div
-          class="grid cursor-pointer rounded-xl bg-white p-12 transition-all duration-500 ease-in-out hover:shadow-lg">
+          class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-500 ease-in-out hover:shadow-lg">
           <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -140,7 +116,7 @@
           </a>
         </div>
         <div
-          class="grid cursor-pointer rounded-xl bg-white p-12 transition-all duration-500 ease-in-out hover:shadow-lg">
+          class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-500 ease-in-out hover:shadow-lg">
           <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -160,7 +136,7 @@
           </a>
         </div>
         <div
-          class="grid cursor-pointer rounded-xl bg-white p-12 transition-all duration-500 ease-in-out hover:shadow-lg">
+          class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-500 ease-in-out hover:shadow-lg">
           <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -181,10 +157,8 @@
       </div>
     </section>
 
-    <!-- about -->
-    <section class="flex h-screen w-full items-center">
-      <img src="https://picsum.photos/600/600?random=0" class="h-full w-1/2" id="photo-4" />
-      <div class="relative flex h-full w-1/2 flex-col justify-center bg-[#1B5B31] px-16">
+    <section class="flex h-auto py-16 px-4 bg-[#1B5B31] w-full items-center">
+      <div class="relative flex h-full w-full flex-col justify-center">
         <small class="mb-4 block text-base text-white">O firmie</small>
         <h1 class="mb-12 text-6xl font-medium text-white">Tworzymy <br><span class="italic">z pasją</span></h1>
         <p class="mb-20 text-white">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani
@@ -204,12 +178,11 @@
       </div>
     </section>
 
-    <!-- projects -->
-    <section class="flex relative w-full flex-col justify-center gap-12 bg-[#DCC1AB]">
+    <section class="flex isolate relative w-full flex-col justify-center py-16 px-4 gap-12 bg-[#DCC1AB]">
       <div
-        class="flex justify-center items-end absolute bottom-0 left-0 h-[64rem] w-full z-[1] bg-gradient-to-b from-transparent to-[#DCC1AB]">
+        class="flex justify-center items-end absolute bottom-0 left-0 h-[32rem] w-full z-[1] bg-gradient-to-b from-transparent to-[#DCC1AB]">
         <a href="#"
-          class="absolute bottom-12 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black hover:ring-2 hover:ring-black/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-black/50 focus:transition-all focus:ease-in-out">
+          class="absolute bottom-24 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black hover:ring-2 hover:ring-black/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-black/50 focus:transition-all focus:ease-in-out">
           Rozwiń
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-4 h-4">
@@ -217,11 +190,11 @@
           </svg>
         </a>
       </div>
-      <div class="p-24">
+      <div>
         <small class="mb-4 block text-base text-[#1B5B31]">Realizacje</small>
         <h2 class="mb-8 text-6xl font-medium">Nasze <span class="font-semibold italic">projekty</span></h2>
       </div>
-      <div class="grid grid-cols-3 gap-8 grid-flow-dense">
+      <div class="grid grid-cols-3 gap-1 grid-flow-dense">
         <div class="row-span-2">
           <img src="https://picsum.photos/600/600?random=0" class="h-full" />
         </div>
@@ -251,20 +224,19 @@
         </div>
     </section>
 
-    <!-- contact -->
-    <div class="flex items-center justify-center px-48 py-16 bg-[#F5F0EC]">
-      <div class="bg-[#1B5B31] flex items-center justify-center text-white p-24 gap-16">
+    <section class="flex items-center justify-center px-4 py-16 bg-[#1B5B31]">
+      <div class="flex flex-col items-center justify-center text-white gap-16">
         <h3 class="text-5xl">Zostańmy w kontakcie!
           <br>Znajdziesz nas na <span class="font-medium">Instagramie.</span>
         </h3>
-        <div class="flex flex-col justify-between gap-8">
-          <p>Śledź nasze najnowsze realizacje!</p>
+        <div class="self-start">
+          <p class="mb-4">Śledź nasze najnowsze realizacje!</p>
           <a href="#"
             class="flex self-start items-center justify-center rounded-full bg-[#F5F0EC] px-6 py-3 focus:ring-4 hover:ring-2 hover:bg-[#F5F0EC]/50 hover:transition-all hover:ease-in-out focus:bg-[#F5F0EC]/50 focus:transition-all focus:ease-in-out text-[#1B5B31]">
             Instagram</a>
         </div>
       </div>
-    </div>
+    </section>
   </body>
 
 </html>
