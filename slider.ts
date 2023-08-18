@@ -25,3 +25,21 @@ const photoNext = document.querySelector('#photo-next') as HTMLButtonElement
 photoNext.addEventListener('click', () => {
   currentPhoto = handlePhotoSlider(photos, currentPhoto, true)
 })
+
+const photosDialog = document.querySelector('#photos-dialog') as HTMLDialogElement
+const photos2 = document.querySelectorAll('#photo-100, #photo-101, #photo-102, #photo-103, #photo-104, #photo-105, #photo-106, #photo-107, #photo-108') as NodeListOf<HTMLImageElement>
+let currentPhoto2 = 0
+
+photos2.forEach((photo, index) => {
+  photo.style.transform = `translateX(${index * 100}%)`
+})
+
+const photoPrevious2 = document.querySelector('#photo-previous2') as HTMLButtonElement
+photoPrevious2.addEventListener('click', () => {
+  currentPhoto2 = handlePhotoSlider(photos2, currentPhoto2, false)
+})
+
+const photoNext2 = document.querySelector('#photo-next2') as HTMLButtonElement
+photoNext2.addEventListener('click', () => {
+  currentPhoto2 = handlePhotoSlider(photos2, currentPhoto2, true)
+})
