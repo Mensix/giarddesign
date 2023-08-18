@@ -10,10 +10,10 @@
   </head>
 
   <body class="overflow-x-hidden">
-    <nav
-      class="sticky top-0 isolate z-[1] flex h-[72px] items-center justify-between bg-white px-4 py-6 shadow-md lg:px-20">
+    <nav class="sticky top-0 isolate z-[1] flex h-[72px] items-center bg-white px-4 py-6 shadow-md lg:px-20">
       <span class="text-2xl"><span class="font-black">giard</span>design</span>
-      <ul class="hidden items-center gap-12 lg:flex">
+      <div class="flex-grow"></div>
+      <ul class="mr-12 hidden items-center gap-12 lg:flex">
         <li class="group relative flex gap-1">
           <button
             class="group group flex items-center gap-1 text-gray-900 after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-black after:transition-all after:duration-1000 hover:after:w-full">
@@ -52,17 +52,17 @@
           class="relative after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-gray-900 after:transition-all after:duration-1000 hover:after:w-full">
           <a href="#" class="text-gray-900">Kontakt</a>
         </li>
-        <li class="relative mx-auto w-max">
-          <input type="search" id="search-input" placeholder=""
-            class="relative z-10 h-12 w-12 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-48 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-48 [&:not(:placeholder-shown)]:pl-12" />
-          <svg class="absolute top-0 h-6 w-6 translate-x-1/2 translate-y-1/2 stroke-gray-500"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-        </li>
       </ul>
+      <div class="relative mx-auto w-max">
+        <input type="search" id="search-input" placeholder=""
+          class="relative z-10 h-12 w-12 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-48 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-48 [&:not(:placeholder-shown)]:pl-12" />
+        <svg class="absolute top-0 h-6 w-6 translate-x-1/2 translate-y-1/2 stroke-gray-500"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </svg>
+      </div>
     </nav>
 
     <main class="isolate flex h-[calc(100vh-72px)] w-full items-center">
@@ -253,47 +253,47 @@
         <div id="photo-4-clickable"
           class="group relative flex w-auto cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:transition-transform hover:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=0"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-5-clickable"
           class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=1"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-6-clickable"
           class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=2"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-7-clickable"
           class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=3"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-8-clickable"
           class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=4"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-9-clickable"
           class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=5"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-10-clickable"
           class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=6"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-11-clickable"
           class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=7"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-12-clickable"
           class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=8"
-            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000">
+            class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
       </div>
     </section>
@@ -403,7 +403,7 @@
       </ul>
     </footer>
 
-    <dialog id="photos-dialog" class="backdrop:bg-white/50 w-2/5 h-4/5">
+    <dialog id="photos-dialog" class="w-[calc(100vw-4rem)] h-2/5 lg:h-4/5 lg:w-2/5 backdrop:bg-white/50">
       <div class="relative h-full overflow-hidden">
         <img src="https://picsum.photos/600/600?random=0"
           class="absolute h-full w-full transition-transform duration-1000" id="photo-4" />
@@ -424,16 +424,18 @@
         <img src="https://picsum.photos/600/600?random=8"
           class="absolute h-full w-full transition-transform duration-1000" id="photo-12" />
 
-        <div class="absolute w-full h-full">
-          <button class="absolute p-4 top-1/2 bg-[#F5F0EC]" id="photo-previous2">
+        <div class="absolute h-full w-full">
+          <button class="group absolute top-1/2 bg-[#F5F0EC] p-4" id="photo-previous2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="h-6 w-6">
+              stroke="currentColor"
+              class="h-6 w-6 transition-transform ease-in-out group-hover:scale-125 group-hover:transition-transform group-hover:ease-in-out">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
           </button>
-          <button class="p-4 absolute top-1/2 bg-[#F5F0EC] right-0" id="photo-next2">
+          <button class="group absolute right-0 top-1/2 bg-[#F5F0EC] p-4" id="photo-next2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="h-6 w-6">
+              stroke="currentColor"
+              class="h-6 w-6 transition-transform ease-in-out group-hover:scale-125 group-hover:transition-transform group-hover:ease-in-out">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
           </button>
