@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="stylesheet" href="index.css" />
     <script src="slider.ts" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
 
   <body class="overflow-x-hidden">
@@ -14,9 +15,9 @@
       class="sticky top-0 isolate z-[1] flex h-[72px] items-center justify-between bg-white px-4 py-6 shadow-md lg:px-20">
       <span class="text-2xl"><span class="font-black">giard</span>design</span>
       <ul class="hidden items-center gap-12 lg:flex">
-        <li class="flex gap-1 relative group">
+        <li class="group relative flex gap-1">
           <button
-            class="flex items-center group gap-1 text-gray-900 after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full group">
+            class="group group flex items-center gap-1 text-gray-900 after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-black after:transition-all after:duration-500 hover:after:w-full">
             <span id="offer-dropdown-button">Oferta</span>
             <svg id="offer-dropdown-button" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none"
               viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
@@ -24,7 +25,7 @@
             </svg>
 
             <ul
-              class="absolute top-16 hidden rounded-md border border-gray-200 bg-white py-2 shadow-sm group-focus:z-[10] group-focus:grid whitespace-nowrap text-left w-auto">
+              class="absolute top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
               <li class="w-full px-4 py-2 hover:bg-gray-100">
                 <a href="#">Strony internetowe</a>
               </li>
@@ -66,17 +67,17 @@
     </nav>
 
     <!-- main -->
-    <main class="isolate flex h-auto w-full items-center lg:h-[calc(100vh-72px)]">
+    <main class="isolate flex h-[calc(100vh-72px)] w-full items-center">
       <section class="relative flex h-full w-full flex-col justify-center bg-[#DCC1AB] px-4 py-16 lg:w-1/2 lg:px-20">
-        <h1 class="mb-12 text-6xl font-medium">
+        <h1 class="animate__animated animate__fadeInLeft mb-12 text-5xl font-medium lg:text-6xl">
           Nowoczesna aranżacja Twojego ogrodu
         </h1>
-        <p class="mb-20">
+        <p class="animate__animated animate__fadeInLeft mb-20">
           Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
           realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
           podejściem do każdego projektu.
         </p>
-        <ul class="flex flex-wrap gap-2">
+        <ul class="animate__animated animate__fadeInLeft flex flex-wrap gap-2">
           <a href="#"
             class="rounded-full bg-[#1B5B31] px-6 py-3 text-white hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
             Skontaktuj się z nami</a>
@@ -99,15 +100,17 @@
           class="absolute h-full w-full transition-transform duration-1000" id="photo-2" />
 
         <div class="absolute bottom-0 right-0 bg-[#F5F0EC]">
-          <button class="p-4" id="photo-previous">
+          <button class="group p-4" id="photo-previous">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="h-6 w-6">
+              stroke="currentColor"
+              class="h-6 w-6 transition-transform ease-in-out group-hover:scale-125 group-hover:transition-transform group-hover:ease-in-out">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
           </button>
-          <button class="p-4" id="photo-next">
+          <button class="group p-4" id="photo-next">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="h-6 w-6">
+              stroke="currentColor"
+              class="h-6 w-6 transition-transform ease-in-out group-hover:scale-125 group-hover:transition-transform group-hover:ease-in-out">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
           </button>
@@ -124,7 +127,7 @@
     <section class="flex h-auto w-full flex-col justify-center gap-12 bg-[#F5F0EC] px-4 py-16">
       <div class="lg:px-36">
         <small class="mb-4 block text-base text-[#1B5B31]">Oferta</small>
-        <h2 class="mb-8 text-6xl font-medium">
+        <h2 class="mb-8 text-4xl font-medium lg:text-5xl">
           Działamy <span class="font-semibold italic">kompleksowo</span>
         </h2>
         <p>
@@ -142,7 +145,7 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
           </svg>
-          <h4 class="mb-4 block text-4xl">Projekty</h4>
+          <h4 class="mb-4 block text-2xl lg:text-3xl">Projekty</h4>
           <p class="mb-12">
             Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
             wykorzystaniem istniejącej przestrzeni.
@@ -164,7 +167,7 @@
               d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <h4 class="mb-4 block text-4xl">Wizualizacje</h4>
+          <h4 class="mb-4 block text-2xl lg:text-3xl">Wizualizacje</h4>
           <p class="mb-12">
             Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
             animowanego w technologii 3D.
@@ -185,7 +188,7 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
           </svg>
-          <h4 class="mb-4 block text-4xl">Realizacje</h4>
+          <h4 class="mb-4 block text-2xl lg:text-3xl">Realizacje</h4>
           <p class="mb-12">
             Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
             zaawansowanych technologii.
@@ -206,9 +209,9 @@
       <img src="https://picsum.photos/600/600?random=0" class="hidden h-full w-1/2 lg:block" id="photo-4" />
       <div class="relative flex h-full w-full flex-col justify-center px-4 py-16 lg:px-20">
         <small class="mb-4 block text-base text-white">O firmie</small>
-        <h1 class="mb-12 text-6xl font-medium text-white">
+        <h2 class="mb-12 text-4xl font-medium text-white lg:text-5xl">
           Tworzymy <br /><span class="italic">z pasją</span>
-        </h1>
+        </h2>
         <p class="mb-20 text-white">
           Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
           wykwalifikowani projektanci oraz architekci, których zadaniem jest
@@ -244,44 +247,53 @@
       </div>
       <div class="lg:px-36">
         <small class="mb-4 block text-base text-[#1B5B31]">Realizacje</small>
-        <h2 class="mb-8 text-6xl font-medium">
+        <h2 class="mb-8 text-4xl font-medium lg:text-5xl">
           Nasze <span class="font-semibold italic">projekty</span>
         </h2>
       </div>
-      <div class="grid grid-flow-dense grid-cols-2 gap-1 lg:grid-cols-3">
-        <div class="row-span-2">
+      <div class="grid grid-flow-dense grid-cols-1 gap-1 lg:grid-cols-3">
+        <div
+          class="group relative flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=0" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=1" class="h-full" />
+        <div
+          class="group relative row-span-2 flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=1" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=2" class="h-full" />
+        <div
+          class="group relative row-span-2 flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=2" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=3" class="h-full" />
+        <div
+          class="group relative t after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=3" class="h-full" />
         </div>
-        <div class="row-span-2">
+        <div
+          class="group relative flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=4" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=5" class="h-full" />
+        <div
+          class="group relative flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=5" class="h-full" />
         </div>
-        <div class="row-span-2">
+        <div
+          class="group relative row-span-2 flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=6" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=7" class="h-full" />
+        <div
+          class="group relative flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=7" class="h-full" />
         </div>
-        <div>
-          <img src="https://picsum.photos/600/600?random=8" class="h-full" />
+        <div
+          class="group relative row-span-2 flex cursor-pointer items-center justify-center transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          <img src=" https://picsum.photos/600/600?random=8" class="h-full" />
         </div>
       </div>
     </section>
 
     <section class="flex w-full items-center justify-center bg-[#F5F0EC] p-4 lg:px-40 lg:py-16">
       <div class="flex w-full flex-wrap items-center justify-between bg-[#1B5B31] p-8 text-white lg:px-16 lg:py-32">
-        <h4 class="mb-8 text-4xl lg:mb-0">
+        <h4 class="mb-8 text-2xl lg:mb-0 lg:text-3xl">
           Zostańmy w kontakcie! <br />Znajdziesz nas na
           <span class="font-medium italic">Instagramie.</span>
         </h4>
