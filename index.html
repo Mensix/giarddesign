@@ -11,13 +11,16 @@
     <script src="reveal.ts" type="module"></script>
     <script src="scroll.ts" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
   </head>
 
   <body class="overflow-x-hidden">
     <nav class="sticky top-0 isolate z-[1] flex h-[72px] items-center gap-2 bg-white px-4 py-6 shadow-md lg:px-20">
-      <span class="text-2xl"><span class="font-black">giard</span>design</span>
+      <a href="#about" class="text-2xl"><span class="font-black">giard</span>design</a>
       <div class="flex-grow"></div>
-      <ul class="mr-12 hidden items-center gap-12 lg:flex">
+      <ul class="hidden items-center gap-12 lg:flex">
         <li class="group relative flex gap-1">
           <button
             class="group flex items-center gap-1 text-gray-900 after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-black after:transition-all after:duration-1000 hover:after:w-full">
@@ -30,13 +33,13 @@
             <ul
               class="animate__animated animate__fadeIn absolute top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
               <li class="w-full px-4 py-2 hover:bg-gray-100">
-                <a href="#offer">Projekty</a>
+                <a href="#offer"> Projekty </a>
               </li>
               <li class="w-full px-4 py-2 hover:bg-gray-100">
-                <a href="#offer">Wizualizacje</a>
+                <a href="#offer"> Wizualizacje </a>
               </li>
               <li class="w-full px-4 py-2 hover:bg-gray-100">
-                <a href="#offer">Realizacje</a>
+                <a href="#offer"> Realizacje </a>
               </li>
             </ul>
           </button>
@@ -53,47 +56,61 @@
           class="relative after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-gray-900 after:transition-all after:duration-1000 hover:after:w-full">
           <a href="#contact" class="text-gray-900">Kontakt</a>
         </li>
+        <li class="relative mx-auto w-max">
+          <input type="search" id="search-input" placeholder=""
+            class="relative z-10 h-10 w-10 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-44 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-44 [&:not(:placeholder-shown)]:pl-12" />
+          <svg class="absolute top-0 h-5 w-5 translate-x-1/2 translate-y-1/2 stroke-gray-500"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </li>
       </ul>
-      <div class="relative mx-auto w-max">
-        <input type="search" id="search-input" placeholder=""
-          class="relative z-10 h-12 w-12 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-36 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-36 [&:not(:placeholder-shown)]:pl-12" />
-        <svg class="absolute top-0 h-6 w-6 translate-x-1/2 translate-y-1/2 stroke-gray-500"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-        </svg>
-      </div>
-      <button class="group flex items-center lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="h-6 w-6 transition-transform duration-1000 ease-in-out group-focus:rotate-180 group-focus:transition-transform group-focus:duration-1000 group-focus:ease-in-out">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <ul
-          class="animate__animated animate__fadeIn absolute right-4 top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
-          <li class="w-full px-4 py-2 hover:bg-gray-100">
-            <a href="#offer">Oferta</a>
-          </li>
-          <li class="w-full px-6 py-2 hover:bg-gray-100">
-            <a href="#offer">Projekty</a>
-          </li>
-          <li class="w-full px-6 py-2 hover:bg-gray-100">
-            <a href="#offer">Wizualizacje</a>
-          </li>
-          <li class="w-full px-6 py-2 hover:bg-gray-100">
-            <a href="#offer">Realizacje</a>
-          </li>
-          <li class="w-full px-4 py-2 hover:bg-gray-100">
-            <a href="#about">O firmie</a>
-          </li>
-          <li class="w-full px-4 py-2 hover:bg-gray-100">
-            <a href="#projects">Realizacje</a>
-          </li>
-          <li class="w-full px-4 py-2 hover:bg-gray-100">
-            <a href="#contact">Kontakt</a>
-          </li>
-        </ul>
-      </button>
+      <ul class="flex items-center gap-4 lg:hidden">
+        <li class="group">
+          <button class="group">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="h-6 w-6 transition-transform duration-1000 ease-in-out group-focus:rotate-180 group-focus:transition-transform group-focus:duration-1000 group-focus:ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <ul
+              class="animate__animated animate__fadeIn absolute right-4 top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
+              <li class="w-full px-4 py-2 hover:bg-gray-100">
+                <a href="#offer">Oferta</a>
+              </li>
+              <li class="w-full px-6 py-2 hover:bg-gray-100">
+                <a href="#offer">Projekty</a>
+              </li>
+              <li class="w-full px-6 py-2 hover:bg-gray-100">
+                <a href="#offer">Wizualizacje</a>
+              </li>
+              <li class="w-full px-6 py-2 hover:bg-gray-100">
+                <a href="#offer">Realizacje</a>
+              </li>
+              <li class="w-full px-4 py-2 hover:bg-gray-100">
+                <a href="#about">O firmie</a>
+              </li>
+              <li class="w-full px-4 py-2 hover:bg-gray-100">
+                <a href="#projects">Realizacje</a>
+              </li>
+              <li class="w-full px-4 py-2 hover:bg-gray-100">
+                <a href="#contact">Kontakt</a>
+              </li>
+            </ul>
+          </button>
+        </li>
+        <li class="relative mx-auto w-max">
+          <input type="search" id="search-input" placeholder=""
+            class="relative z-10 h-10 w-10 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-44 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-44 [&:not(:placeholder-shown)]:pl-12" />
+          <svg class="absolute top-0 h-5 w-5 translate-x-1/2 translate-y-1/2 stroke-gray-500"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </li>
+      </ul>
     </nav>
 
     <main class="isolate flex h-[calc(100vh-72px)] w-full scroll-m-16 items-center" id="about">
@@ -108,10 +125,10 @@
         </p>
         <ul class="animate__animated animate__fadeInLeft flex flex-wrap gap-2">
           <a href="#contact"
-            class="rounded-full bg-[#1B5B31] px-6 py-3 text-white hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
+            class="rounded-full bg-[#1B5B31] px-6 py-3 text-white transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:duration-1000 focus:ease-in-out">
             Skontaktuj się z nami</a>
           <a href="#projects"
-            class="flex items-center gap-2 rounded-full border border-[#1B5B31] px-6 py-3 text-[#1B5B31] hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
+            class="flex items-center gap-2 rounded-full border border-[#1B5B31] px-6 py-3 text-[#1B5B31] transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:duration-1000 focus:ease-in-out">
             Zobacz nasze realizacje
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="h-4 w-4">
@@ -170,17 +187,17 @@
       <div class="grid gap-8 lg:grid-flow-col" id="reveal">
         <div
           class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-1000 ease-in-out hover:scale-105 hover:shadow-lg">
-          <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+          <svg class="mb-8 h-12 w-12 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+              d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
           </svg>
           <h4 class="mb-4 block text-2xl lg:text-3xl">Projekty</h4>
           <p class="mb-12">
             Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
             wykorzystaniem istniejącej przestrzeni.
           </p>
-          <a href="#"
+          <a href="#projects"
             class="relative inline-flex w-fit items-center gap-2 self-end text-[#1B5B31] after:absolute after:-bottom-2 after:left-0 after:h-[0.0625rem] after:w-0 after:bg-[#1B5B31] after:transition-all after:duration-1000 hover:after:w-full">
             Dowiedz się więcej
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -191,18 +208,18 @@
         </div>
         <div
           class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-1000 ease-in-out hover:scale-105 hover:shadow-lg">
-          <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mb-8 w-12 h-12">
+            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+            <path fill-rule="evenodd"
+              d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+              clip-rule="evenodd" />
           </svg>
           <h4 class="mb-4 block text-2xl lg:text-3xl">Wizualizacje</h4>
           <p class="mb-12">
             Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
             animowanego w technologii 3D.
           </p>
-          <a href="#"
+          <a href="#projects"
             class="relative inline-flex w-fit items-center gap-2 self-end text-[#1B5B31] after:absolute after:-bottom-2 after:left-0 after:h-[0.0625rem] after:w-0 after:bg-[#1B5B31] after:transition-all after:duration-1000 hover:after:w-full">
             Dowiedz się więcej
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -213,19 +230,19 @@
         </div>
         <div
           class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-1000 ease-in-out hover:scale-105 hover:shadow-lg">
-          <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mb-8 w-12 h-12">
+            <path fill-rule="evenodd"
+              d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+              clip-rule="evenodd" />
           </svg>
           <h4 class="mb-4 block text-2xl lg:text-3xl">Realizacje</h4>
           <p class="mb-12">
             Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
             zaawansowanych technologii.
           </p>
-          <a href="#"
+          <a href="#projects"
             class="relative inline-flex w-fit items-center gap-2 self-end text-[#1B5B31] after:absolute after:-bottom-2 after:left-0 after:h-[0.0625rem] after:w-0 after:bg-[#1B5B31] after:transition-all after:duration-1000 hover:after:w-full">
-            Dowiedz się więcej
+            Zobacz nasze realizacje
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="h-4 w-4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -250,8 +267,8 @@
           i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do
           współczesnego trybu życia.
         </p>
-        <a href="#"
-          class="inline-flex items-center gap-2 self-start rounded-full border border-white px-6 py-3 text-white hover:ring-2 hover:ring-white/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-white/50 focus:transition-all focus:ease-in-out"
+        <a href="#about"
+          class="inline-flex items-center gap-2 self-start rounded-full border border-white px-6 py-3 text-white transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-white/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-white/50 focus:transition-all focus:duration-1000 focus:ease-in-out"
           id="reveal">
           Poznaj nas bliżej
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -267,7 +284,7 @@
       <div id="overlay"
         class="absolute bottom-0 left-0 z-[1] flex h-[32rem] w-full items-end justify-center bg-gradient-to-b from-transparent to-[#DCC1AB]">
         <button id="show-more"
-          class="absolute bottom-24 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black hover:ring-2 hover:ring-black/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-black/50 focus:transition-all focus:ease-in-out">
+          class="absolute bottom-24 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-black/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-black/50 focus:transition-all focus:duration-1000 focus:ease-in-out">
           Rozwiń
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="h-4 w-4">
@@ -341,30 +358,33 @@
         <div>
           <p class="mb-2" id="reveal">Śledź nasze najnowsze realizacje!</p>
           <a href="#" id="reveal"
-            class="flex items-center justify-center rounded-full bg-[#F5F0EC] px-6 py-3 text-[#1B5B31] hover:ring-2 hover:ring-[#F5F0EC]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#F5F0EC]/50 focus:transition-all focus:ease-in-out">
+            class="flex items-center justify-center rounded-full bg-[#F5F0EC] px-6 py-3 text-[#1B5B31] transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-[#F5F0EC]/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-[#F5F0EC]/50 focus:transition-all focus:duration-1000 focus:ease-in-out">
             Instagram</a>
         </div>
       </div>
     </section>
 
     <footer class="scroll-m-16 bg-gray-950 px-4 py-16 text-white lg:px-40" id="footer">
-      <div class="flex items-center justify-between">
-        <span class="text-2xl"><span class="font-black">giard</span>design</span>
-        <a href="#"
-          class="rounded-full bg-[#1B5B31] px-6 py-3 text-white hover:ring-2 hover:ring-[#1B5B31]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#1B5B31]/50 focus:transition-all focus:ease-in-out">
-          Skontaktuj się z nami</a>
+      <div class="grid grid-flow-row lg:grid-flow-col items-center justify-between">
+        <a href="#about" class="text-2xl"><span class="font-black">giard</span>design</a>
+        <div class="grid items-center grid-flow-row lg:grid-flow-col gap-4">
+          <span>Daj znać, co możemy dla Ciebie zrobić!</span>
+          <a href="#"
+            class="w-fit rounded-full bg-green-700 text-white px-6 py-3 hover:bg-green-800 focus:bg-green-900 transition-all duration-1000 ease-in-out hover:ring-2 hover:ring-green-700/50 hover:transition-all hover:duration-1000 hover:ease-in-out focus:ring-4 focus:ring-green-700/50 focus:transition-all focus:duration-1000 focus:ease-in-out">
+            Skontaktuj się z nami
+          </a>
+        </div>
       </div>
       <hr class="my-8 bg-white" />
-      <div class="mb-8 flex justify-between lg:mb-32">
-        <ul class="flex flex-col lg:flex-row lg:gap-16">
-          <li>Kontakt</li>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Linkedin</li>
+      <div class="flex flex-wrap justify-between mb-8">
+        <ul class="flex gap-16 mb-1 lg:mb-0">
+          <a href="#">Kontakt</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Linkedin</a>
         </ul>
-        <div class="flex-grow"></div>
-        <ul class="mb-8 flex flex-col lg:mb-0 lg:flex-row lg:gap-16">
-          <li class="text-right lg:text-left">000-000-000</li>
+        <ul class="flex gap-16">
+          <li class="text-right">000-000-000</li>
           <li>
             <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
           </li>
