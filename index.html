@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
     <script src="slider.ts" type="module"></script>
     <script src="animation.ts" type="module"></script>
+    <script src="reveal.ts" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
 
@@ -234,17 +235,18 @@
       </div>
     </section>
 
-    <section class="relative isolate flex w-full flex-col justify-center gap-12 bg-[#DCC1AB] px-4 py-16">
+    <section class="relative isolate flex w-full flex-col justify-center gap-12 bg-[#DCC1AB] px-4 py-16" id="masonry">
       <div
+      id="overlay"
         class="absolute bottom-0 left-0 z-[1] flex h-[32rem] w-full items-end justify-center bg-gradient-to-b from-transparent to-[#DCC1AB]">
-        <a href="#"
+        <button id="show-more"
           class="absolute bottom-24 inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black hover:ring-2 hover:ring-black/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-black/50 focus:transition-all focus:ease-in-out">
           Rozwiń
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="h-4 w-4">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
-        </a>
+        </button>
       </div>
       <div class="lg:px-36">
         <small class="mb-4 block text-base text-[#1B5B31]" id="reveal">Realizacje</small>
@@ -274,27 +276,27 @@
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-8-clickable"
-          class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          class="group relative hidden cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=4"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-9-clickable"
-          class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          class="group relative hidden cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=5"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-10-clickable"
-          class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          class="group relative hidden row-span-2 cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=6"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-11-clickable"
-          class="group relative flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          class="group relative hidden cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=7"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
         <div id="photo-12-clickable"
-          class="group relative row-span-2 flex cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
+          class="group relative hidden row-span-2 cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=8"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:transition-transform group-hover:duration-1000" />
         </div>
