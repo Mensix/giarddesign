@@ -1,5 +1,5 @@
 const showMore = document.querySelector<HTMLButtonElement>('#show-more')!
-const masonry = document.querySelector<HTMLDivElement>('#masonry')!
+const masonry = document.querySelector<HTMLDivElement>('#projects')!
 const overlay = document.querySelector<HTMLDivElement>('#overlay')!
 let isExpanded = false
 
