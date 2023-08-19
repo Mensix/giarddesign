@@ -9,14 +9,14 @@ let currentPhoto = 0
 
 function showPhotoDialog(photo: HTMLImageElement) {
   currentPhoto = Number.parseInt(photo.id.split('-')[1]) - 4
-  photosDialog.showModal()
-  document.body.style.overflow = 'hidden'
-
   photos.forEach((photo, index) => {
     photo.style.transform = `translateX(${(index - currentPhoto) * 100}%)`
     if (index - currentPhoto === 0)
       photo.style.visibility = 'visible'
   })
+
+  photosDialog.showModal()
+  document.body.style.overflow = 'hidden'
 }
 
 function handlePhotoPrevious() {
