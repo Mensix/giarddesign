@@ -16,6 +16,7 @@ function showPhotoDialog(photo: HTMLImageElement) {
 
   photosDialog.showModal()
   document.body.style.overflow = 'hidden'
+  document.documentElement.style.overflow = 'hidden'
 }
 
 function handlePhotoPrevious() {
@@ -30,6 +31,11 @@ photosMasonry.forEach((photo) => {
   photo.addEventListener('click', () => {
     showPhotoDialog(photo)
   })
+})
+
+photosDialog.addEventListener('close', () => {
+  document.body.style.removeProperty('overflow')
+  document.documentElement.style.removeProperty('overflow')
 })
 
 const photoPrevious = document.querySelector<HTMLButtonElement>('#photo-previous2')!
