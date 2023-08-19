@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link rel="stylesheet" href="index.css" />
     <script src="slider.ts" type="module"></script>
+    <script src="animation.ts" type="module"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
 
@@ -18,13 +19,15 @@
           <button
             class="group group flex items-center gap-1 text-gray-900 after:absolute after:-bottom-6 after:left-0 after:h-[0.125rem] after:w-0 after:bg-black after:transition-all after:duration-1000 hover:after:w-full">
             <span id="offer-dropdown-button">Oferta</span>
-            <svg id="offer-dropdown-button" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+            <svg id="offer-dropdown-button"
+              class="h-4 w-4 transition-transform duration-1000 ease-in-out group-focus:rotate-180 group-focus:transition-transform group-focus:duration-1000 group-focus:ease-in-out"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="h-6 w-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
             </svg>
 
             <ul
-              class="absolute top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
+              class="animate__animated animate__fadeIn absolute top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
               <li class="w-full px-4 py-2 hover:bg-gray-100">
                 <a href="#">Strony internetowe</a>
               </li>
@@ -89,7 +92,8 @@
           </a>
         </ul>
       </section>
-      <div class="relative hidden h-full w-1/2 overflow-hidden bg-transparent lg:block">
+      <div
+        class="animate__animated animate__fadeInRight relative hidden h-full w-1/2 overflow-hidden bg-transparent lg:block">
         <img src="https://picsum.photos/600/600?random=0"
           class="absolute h-full w-full transition-transform duration-1000" id="photo-0" />
         <img src="https://picsum.photos/600/600?random=1"
@@ -124,18 +128,18 @@
 
     <section class="flex h-auto w-full flex-col justify-center gap-12 bg-[#F5F0EC] px-4 py-16">
       <div class="lg:px-36">
-        <small class="mb-4 block text-base text-[#1B5B31]">Oferta</small>
-        <h2 class="mb-8 text-4xl font-medium lg:text-5xl">
+        <small class="mb-4 block text-base text-[#1B5B31]" id="reveal">Oferta</small>
+        <h2 class="mb-8 text-4xl font-medium lg:text-5xl" id="reveal">
           Działamy <span class="font-semibold italic">kompleksowo</span>
         </h2>
-        <p>
+        <p id="reveal">
           Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
           nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
           Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym
           etapie posłużymy radą i wieloletnim doświadczeniem.
         </p>
       </div>
-      <div class="grid gap-8 lg:grid-flow-col">
+      <div class="grid gap-8 lg:grid-flow-col" id="reveal">
         <div
           class="grid cursor-pointer rounded-xl bg-white p-8 transition-all duration-1000 ease-in-out hover:scale-105 hover:shadow-lg">
           <svg class="mb-8 h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -206,11 +210,11 @@
     <section class="flex h-auto w-full bg-[#1B5B31] lg:h-screen">
       <img src="https://picsum.photos/600/600?random=0" class="hidden h-full w-1/2 lg:block" id="photo-3" />
       <div class="relative flex h-full w-full flex-col justify-center px-4 py-16 lg:px-20">
-        <small class="mb-4 block text-base text-white">O firmie</small>
-        <h2 class="mb-12 text-4xl font-medium text-white lg:text-5xl">
+        <small class="mb-4 block text-base text-white" id="reveal">O firmie</small>
+        <h2 class="mb-12 text-4xl font-medium text-white lg:text-5xl" id="reveal">
           Tworzymy <br /><span class="italic">z pasją</span>
         </h2>
-        <p class="mb-20 text-white">
+        <p class="mb-20 text-white" id="reveal">
           Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
           wykwalifikowani projektanci oraz architekci, których zadaniem jest
           rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja
@@ -218,16 +222,15 @@
           i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do
           współczesnego trybu życia.
         </p>
-        <div>
-          <a href="#"
-            class="inline-flex items-center gap-2 rounded-full border border-white px-6 py-3 text-white hover:ring-2 hover:ring-white/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-white/50 focus:transition-all focus:ease-in-out">
-            Poznaj nas bliżej
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="h-4 w-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </a>
-        </div>
+        <a href="#"
+          class="inline-flex self-start items-center gap-2 rounded-full border border-white px-6 py-3 text-white hover:ring-2 hover:ring-white/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-white/50 focus:transition-all focus:ease-in-out"
+          id="reveal">
+          Poznaj nas bliżej
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="h-4 w-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -244,12 +247,12 @@
         </a>
       </div>
       <div class="lg:px-36">
-        <small class="mb-4 block text-base text-[#1B5B31]">Realizacje</small>
-        <h2 class="mb-8 text-4xl font-medium lg:text-5xl">
+        <small class="mb-4 block text-base text-[#1B5B31]" id="reveal">Realizacje</small>
+        <h2 class="mb-8 text-4xl font-medium lg:text-5xl" id="reveal">
           Nasze <span class="font-semibold italic">projekty</span>
         </h2>
       </div>
-      <div class="grid grid-flow-dense grid-cols-1 gap-1 lg:grid-cols-3">
+      <div class="grid grid-flow-dense grid-cols-1 gap-1 lg:grid-cols-3" id="reveal">
         <div id="photo-4-clickable"
           class="group relative flex w-auto cursor-zoom-in items-center justify-center overflow-hidden transition-colors ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-transparent after:transition-colors after:duration-1000 hover:transition-transform hover:duration-1000 hover:after:bg-black/50 hover:after:transition-colors hover:after:duration-1000">
           <img src="https://picsum.photos/600/600?random=0"
@@ -300,13 +303,13 @@
 
     <section class="flex w-full items-center justify-center bg-[#F5F0EC] p-4 lg:px-40 lg:py-16">
       <div class="flex w-full flex-wrap items-center justify-between bg-[#1B5B31] p-8 text-white lg:px-16 lg:py-32">
-        <h4 class="mb-8 text-2xl lg:mb-0 lg:text-3xl">
+        <h4 class="mb-8 text-2xl lg:mb-0 lg:text-3xl" id="reveal">
           Zostańmy w kontakcie! <br />Znajdziesz nas na
           <span class="font-medium italic">Instagramie.</span>
         </h4>
         <div>
-          <p class="mb-2">Śledź nasze najnowsze realizacje!</p>
-          <a href="#"
+          <p class="mb-2" id="reveal">Śledź nasze najnowsze realizacje!</p>
+          <a href="#" id="reveal"
             class="flex items-center justify-center rounded-full bg-[#F5F0EC] px-6 py-3 text-[#1B5B31] hover:ring-2 hover:ring-[#F5F0EC]/50 hover:transition-all hover:ease-in-out focus:ring-4 focus:ring-[#F5F0EC]/50 focus:transition-all focus:ease-in-out">
             Instagram</a>
         </div>
@@ -403,7 +406,7 @@
       </ul>
     </footer>
 
-    <dialog id="photos-dialog" class="w-[calc(100vw-4rem)] h-2/5 lg:h-4/5 lg:w-2/5 backdrop:bg-white/50">
+    <dialog id="photos-dialog" class="h-2/5 w-[calc(100vw-4rem)] backdrop:bg-white/50 lg:h-4/5 lg:w-2/5">
       <div class="relative h-full overflow-hidden">
         <img src="https://picsum.photos/600/600?random=0"
           class="absolute h-full w-full transition-transform duration-1000" id="photo-4" />
