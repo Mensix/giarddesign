@@ -13,7 +13,7 @@
   </head>
 
   <body class="overflow-x-hidden">
-    <nav class="sticky top-0 isolate z-[1] flex h-[72px] items-center bg-white px-4 py-6 shadow-md lg:px-20">
+    <nav class="sticky top-0 isolate z-[1] flex h-[72px] items-center gap-2 bg-white px-4 py-6 shadow-md lg:px-20">
       <span class="text-2xl"><span class="font-black">giard</span>design</span>
       <div class="flex-grow"></div>
       <ul class="mr-12 hidden items-center gap-12 lg:flex">
@@ -60,7 +60,7 @@
       </ul>
       <div class="relative mx-auto w-max">
         <input type="search" id="search-input" placeholder=""
-          class="relative z-10 h-12 w-12 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-48 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-48 [&:not(:placeholder-shown)]:pl-12" />
+          class="relative z-10 h-12 w-12 cursor-pointer rounded-full border bg-transparent outline-none transition-[width] duration-1000 ease-in-out focus:w-36 focus:pl-12 focus:transition-[width] focus:duration-1000 focus:ease-in-out [&:not(:placeholder-shown)]:w-36 [&:not(:placeholder-shown)]:pl-12" />
         <svg class="absolute top-0 h-6 w-6 translate-x-1/2 translate-y-1/2 stroke-gray-500"
           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="h-6 w-6">
@@ -68,6 +68,41 @@
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
         </svg>
       </div>
+      <button class="group flex items-center lg:hidden">
+        <svg id="offer-dropdown-button"
+          class="h-6 w-6 transition-transform duration-1000 ease-in-out group-focus:rotate-180 group-focus:transition-transform group-focus:duration-1000 group-focus:ease-in-out"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <ul
+          class="animate__animated animate__fadeIn absolute right-4 top-16 hidden w-auto whitespace-nowrap rounded-md border border-gray-200 bg-white py-2 text-left shadow-sm group-focus:z-[10] group-focus:grid">
+          <li class="w-full px-4 py-2 hover:bg-gray-100">
+            <a href="#">Oferta</a>
+          </li>
+          <li class="w-full px-6 py-2 hover:bg-gray-100">
+            <a href="#">Strony internetowe</a>
+          </li>
+          <li class="w-full px-6 py-2 hover:bg-gray-100">
+            <a href="#">Aplikacje</a>
+          </li>
+          <li class="w-full px-6 py-2 hover:bg-gray-100">
+            <a href="#">Sklepy internetowe</a>
+          </li>
+          <li class="w-full px-6 py-2 hover:bg-gray-100">
+            <a href="#">Blogi</a>
+          </li>
+          <li class="w-full px-4 py-2 hover:bg-gray-100">
+            <a href="#">O firmie</a>
+          </li>
+          <li class="w-full px-4 py-2 hover:bg-gray-100">
+            <a href="#">Realizacje</a>
+          </li>
+          <li class="w-full px-4 py-2 hover:bg-gray-100">
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </button>
     </nav>
 
     <main class="isolate flex h-[calc(100vh-72px)] w-full items-center">
