@@ -1,8 +1,8 @@
 import handlePhotoSlider from './slider'
 
 const photosDialog = document.querySelector<HTMLDialogElement>('#photos-dialog')!
-const photosMasonry = document.querySelectorAll<HTMLImageElement>('#photo-4-clickable, #photo-5-clickable, #photo-6-clickable, #photo-7-clickable, #photo-8-clickable, #photo-9-clickable, #photo-10-clickable, #photo-11-clickable, #photo-12-clickable')
-const photos = document.querySelectorAll<HTMLImageElement>('#photo-4, #photo-5, #photo-6, #photo-7, #photo-8, #photo-9, #photo-10, #photo-11, #photo-12')
+const photosMasonry = document.querySelectorAll<HTMLImageElement>('#photo-4-clickable, #photo-5-clickable, #photo-6-clickable, #photo-7-clickable, #photo-8-clickable, #photo-9-clickable, #photo-10-clickable, #photo-11-clickable, #photo-12-clickable, #photo-13-clickable, #photo-14-clickable')
+const photos = document.querySelectorAll<HTMLImageElement>('#photo-4, #photo-5, #photo-6, #photo-7, #photo-8, #photo-9, #photo-10, #photo-11, #photo-12, #photo-13, #photo-14')
 
 let currentPhoto = 0
 
