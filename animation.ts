@@ -3,7 +3,7 @@ const wasFired: boolean[] = []
 
 function animateReveals() {
   const windowHeight = window.innerHeight
-  const elementVisible = 25
+  const elementVisible = 10
 
   reveals.forEach((reveal, i) => {
     const elementTop = reveal.getBoundingClientRect().top
