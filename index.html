@@ -68,7 +68,7 @@
         </li>
       </ul>
       <ul class="flex items-center gap-4 lg:hidden">
-        <li class="group">
+        <li class="group leading-none">
           <button class="group">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor"
@@ -253,8 +253,8 @@
       </div>
     </section>
 
-    <section class="flex h-auto w-full scroll-m-16 bg-[#1B5B31] lg:h-screen" id="about">
-      <img src="https://picsum.photos/600/600?random=0" class="hidden h-full w-1/2 lg:block" id="photo-3" />
+    <section class="flex h-auto w-full scroll-m-16 flex-col bg-[#1B5B31] lg:h-screen lg:flex-row" id="about">
+      <img src="https://picsum.photos/600/600?random=0" class="h-1/2 w-full lg:h-full lg:w-1/2" id="photo-3" />
       <div class="relative flex h-full w-full flex-col justify-center px-4 py-16 lg:px-20">
         <small class="mb-4 block text-base text-white" id="reveal">O firmie</small>
         <h2 class="mb-12 text-4xl font-medium text-white lg:text-5xl" id="reveal">
@@ -378,13 +378,13 @@
       </div>
       <hr class="my-8 bg-white" />
       <div class="mb-8 flex flex-wrap justify-between">
-        <ul class="mb-1 flex gap-16 lg:mb-0">
+        <ul class="mb-4 flex flex-wrap gap-x-16 gap-y-1 lg:mb-0">
           <a href="#">Kontakt</a>
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
           <a href="#">LinkedIn</a>
         </ul>
-        <ul class="flex gap-16">
+        <ul class="flex flex-wrap gap-x-16 gap-y-1">
           <li class="text-right">000-000-000</li>
           <li>
             <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
@@ -458,7 +458,8 @@
       </ul>
     </footer>
 
-    <dialog id="photos-dialog" class="h-2/5 w-[calc(100vw-4rem)] backdrop:bg-white/90 lg:h-4/5 lg:w-2/5">
+    <dialog id="photos-dialog"
+      class="h-2/5 w-[calc(100vw-4rem)] bg-white p-2 backdrop:backdrop-blur-lg lg:h-4/5 lg:w-2/5">
       <div class="relative h-full overflow-hidden">
         <img src="https://picsum.photos/600/600?random=0"
           class="absolute h-full w-full transition-transform duration-1000" id="photo-4" />

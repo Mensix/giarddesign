@@ -8,6 +8,7 @@ export default function handlePhotoSlider(photos: NodeListOf<HTMLImageElement>, 
   currentPhoto = currentPhoto % photos.length
   return currentPhoto
 }
+
 const photos = document.querySelectorAll('#photo-0, #photo-1, #photo-2') as NodeListOf<HTMLImageElement>
 let currentPhoto = 0
 
@@ -15,12 +16,24 @@ photos.forEach((photo, index) => {
   photo.style.transform = `translateX(${index * 100}%)`
 })
 
+let interval = setInterval(() => {
+  currentPhoto = handlePhotoSlider(photos, currentPhoto, true)
+}, 2000)
+
 const photoPrevious = document.querySelector('#photo-previous') as HTMLButtonElement
 photoPrevious.addEventListener('click', () => {
   currentPhoto = handlePhotoSlider(photos, currentPhoto, false)
+  clearInterval(interval)
+  interval = setInterval(() => {
+    currentPhoto = handlePhotoSlider(photos, currentPhoto, true)
+  }, 2000)
 })
 
 const photoNext = document.querySelector('#photo-next') as HTMLButtonElement
 photoNext.addEventListener('click', () => {
   currentPhoto = handlePhotoSlider(photos, currentPhoto, true)
+  clearInterval(interval)
+  interval = setInterval(() => {
+    currentPhoto = handlePhotoSlider(photos, currentPhoto, true)
+  }, 2000)
 })
